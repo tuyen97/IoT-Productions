@@ -1,0 +1,193 @@
+{% extends "pas/base.html" %}
+
+{% block styles %}
+    <style type="text/css">
+        .img_timeline {
+            float: left;
+            max-width: 45px;
+            height: auto;;
+            border-radius: 50%;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-top: -2px;
+        }
+
+        h3.timeline-header span {
+            padding: 5px;
+            border-radius: 4px;
+            color: white;
+            margin-left: 5px;
+        }
+
+        .timeline-item {
+            background-color: beige !important;
+        }
+
+        .bg-yellow a {
+            color: white !important;
+            cursor: pointer;
+        }
+
+        .bg-yellow a:hover {
+            color: #23527c !important;
+        }
+
+        ul.users-list li {
+            width: 33% !important;
+        }
+
+        ul.users-list li img {
+            max-height: 84px;
+        }
+
+    </style>
+
+{% endblock styles %}
+
+{% block content-header %}
+    <h1 id="content-header-text">
+        HPCC LaB
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    </ol>
+{% endblock content-header %}
+
+{% block content %}
+    {% load static %}
+    {% load tz %}
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="info-box bg-yellow">
+                <a href="/pas/warning/"><span class="info-box-icon"><i class="fa fa-warning"></i></span></a>
+
+                <div class="info-box-content">
+                    <span class="info-box-text">Warning</span>
+                    <span class="info-box-number" id="box_warning_value">1</span>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+                    <span class="progress-description">
+                        Members can't recognize
+                    </span>
+                </div>
+                <!-- /.info-box-content -->
+            </div>
+            <div class="box box-success">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Members in LAB now</h3>
+
+                    <div class="box-tools pull-right">
+                        <span class="label label-success">{{ members_in_lab|length }} Members</span>
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                class="fa fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body no-padding" style="">
+                    <ul class="users-list clearfix">
+                        {% for m in members_in_lab %}
+                            <li>
+                                <img src="{{ MEDIA_URL }}{% if m.avatar %}{{ m.avatar }}{% else %}/avatar.png{% endif %}"
+                                     alt="User Image">
+                                <a class="users-list-name" href="{% url 'member-profile' %}?id={{ m.id }}"
+                                   data-toggle="tooltip" data-placement="bottom"
+                                   title="{{ m.name }}">{{ m.name }}</a>
+                            </li>
+                        {% endfor %}
+
+                    </ul>
+                    <!-- /.users-list -->
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer text-center" style="">
+                </div>
+                <!-- /.box-footer -->
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="box bg-primary">
+                <div class="box-body">
+                    <ul class="timeline">
+                        {% localtime on %}
+                            <!-- timeline time label -->
+                            <li class="time-label">
+                                <span class="bg-red">Today - <span id="today_timeline">dd/mm/yyyy</span></span>
+                            </li>
+                            {% for log in logs %}
+                                {% if log.result_auth %}
+                                    {% if log.is_go_in %}
+                                        <li>
+                                            <img class="img_timeline"
+                                                 src="{{ MEDIA_URL }}{{ log.image }}" alt="Photo">
+
+                                            <div class="timeline-item">
+                                                <span class="time"><i
+                                                        class="fa fa-clock-o"></i> {{ log.time_stamp }}</span>
+                                                <h3 class="timeline-header no-border"><a
+                                                        href="{% url 'member-profile' %}?id={{ log.member.id }}">{{ log.member.name }}</a>
+                                                    <span class="go_in"> go in  <i
+                                                            class="fa fa-arrow-right"></i></span>
+                                                </h3>
+                                            </div>
+                                        </li>
+                                    {% else %}
+                                        <li>
+                                            <img class="img_timeline"
+                                                 src="{{ MEDIA_URL }}{{ log.image }}" alt="Photo">
+
+                                            <div class="timeline-item">
+                                                <span class="time"><i
+                                                        class="fa fa-clock-o"></i> {{ log.time_stamp }}</span>
+                                                <h3 class="timeline-header"><a
+                                                        href="{% url 'member-profile' %}?id={{ log.member.id }}">{{ log.member.name }}</a>
+                                                    <span class="go_out"> go out <i
+                                                            class="fa fa-arrow-left"></i></span>
+                                                </h3>
+                                            </div>
+                                        </li>
+                                    {% endif %}
+                                {% else %}
+                                    <li>
+                                        <img class="img_timeline"
+                                             src="{{ MEDIA_URL }}{{ log.image }}" alt="Photo">
+                                        <div class="timeline-item">
+                                            <span class="time"><i class="fa fa-clock-o"></i> {{ log.time_stamp }}</span>
+                                            <h3 class="timeline-header"><a
+                                                    href="{% url 'member-profile' %}?id={{ log.member.id }}">{{ log.member.name }}</a>
+                                                <a href="/pas/warning/">
+                                                    <span class="unknow" data-toggle="tooltip" data-placement="bottom"
+                                                          title="View detail!">
+                                                        {% if log.is_go_in %} go in
+                                                        {% else %} go out
+                                                        {% endif %}
+                                                        <i class="fa fa-close"></i>
+                                                    </span>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+
+                            <li>
+                                <i class="fa fa-clock-o bg-gray"></i>
+                            </li>
+
+                        {% endlocaltime %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block scripts %}
+    {% load static %}
+    <script type="text/javascript" src="{% static '/pas/js/plugins/mqtt.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/pas/js/index.js' %}"></script>
+
+{% endblock scripts %}

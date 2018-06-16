@@ -1,0 +1,152 @@
+{% extends "pas/base.html" %}
+
+{#{% from 'macro.html' import render_btn  with context %}#}
+
+{% block styles %}
+    {#    {% load static %}#}
+    {#    <link rel="stylesheet" type="text/css" href="{% static 'pas/js/plugins/datatables/extensions/Buttons/css/buttons.dataTables.css' %}"/>#}
+    {#    <link rel="stylesheet" type="text/css" href="{% static 'pas/js/plugins/datatables/extensions/Buttons/css/buttons.bootstrap.css' %}"/>#}
+    {#    <link rel="stylesheet" type="text/css" href="{% static 'pas/js/plugins/datatables/extensions/Buttons/css/buttons.jqueryui.css' %}"/>#}
+{% endblock styles %}
+
+{% block content-header %}
+    <h1 id="content-header-text">
+        Members Info
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Members info</li>
+    </ol>
+{% endblock content-header %}
+
+{% block content %}
+
+    <button type="button" id="btn_add_member" class="btn addBtn btn-default" data-toggle="modal"
+            data-target="#modal-add-user" style="margin-left: 5px;">
+        <span class="fa fa-plus"></span>
+        New member
+    </button>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Members info table</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body table-responsive">
+                    <table id="pas_datatables_members_info" class="table table-bordered table-hover" width="100%">
+                        <thead>
+                        <tr>
+                            <th>{{ 'Name' }}
+                            <th>{{ 'Email' }}</th>
+                            <th>{{ 'Card id' }}</th>
+                            <th>{{ 'Course' }}</th>
+                            <th>{{ 'Research about' }}</th>
+                            <th>{{ 'Register day' }}</th>
+                            <th>{{ 'Actions' }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for u in member_list %}
+                            <tr>
+                                <td>
+                                    <a href="{% url 'member-profile' %}?id={{ u.id }}">{{ u.name }}</a>
+                                </td>
+                                <td>{{ u.email }}</td>
+                                <td>{{ u.card_id }}</td>
+                                <td>{{ u.course }}</td>
+                                <td>{{ u.research_about }}</td>
+                                <td>{{ u.registered_day }}</td>
+                                <td class="actions_column">
+                                    <a id="btn_edit_member" class="btn memberBtn btn-xs btn-info" href="{% url 'member-profile' %}?id={{ u.id }}">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <button type="button" class="btn memberBtn btn-xs btn-danger btn_delete_member"
+                                            data-id="{{ u.id }}" data-toggle="modal" data-target="#modal-delete-user">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+
+    <div class="modal fade" id="modal-add-user" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">New member to HPCC</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="/pas/members-info/" method="post" id="new_member_form">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="form-group">
+                            <label for="id_card_id_container">Card ID</label>
+                            <div class="row" id="id_card_id_container">
+                                <div class="col-sm-8" style="text-align: center">
+                                    <p class="form-control">
+                                        <span id="id_card_id_temp" style="display: none;">AA 11 22 BB</span>
+                                        <i class="fa fa-spinner fa-spin" style="font-size:24px; display: none;"></i>
+                                    </p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <button type="button" class="btn btn-default" id="btn-scan-rfid">Scan</button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                        <input class="btn btn-primary pull-right" name="submit" type="submit" value="Submit"
+                               id="btn_submit_new_member">
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <div class="modal modal-danger fade" id="modal-delete-user" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Warning</h4>
+                </div>
+                <div class="modal-body">
+                    Do you realy want to delete this member?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                    <button class="btn btn-warning pull-right" name="submit" type="submit"
+                            id="btn_submit_delete_member">Delete</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+
+{% endblock content %}
+
+{% block scripts %}
+    {% load static %}
+    <script type="text/javascript" src="{% static '/pas/js/plugins/mqtt.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/pas/js/members.js' %}"></script>
+{% endblock scripts %}

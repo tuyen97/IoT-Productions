@@ -1,0 +1,38 @@
+.pas-datatables-info-container {
+    padding: 5px;
+    margin: 5px;
+}
+
+.memberBtn {
+    padding: 4px;
+}
+
+.member_detail_avatar {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+img {
+    margin: auto;
+}
+
+.go_out {
+    background-color: gray;
+}
+
+.unknow {
+    background-color: red;
+    cursor: pointer;
+}
+
+.unknow:hover {
+    background-color: #dd4b39;
+}
+
+.go_in {
+    background-color: #44a75b;
+}
+
+ul.errorlist {
+    color: red;
+}

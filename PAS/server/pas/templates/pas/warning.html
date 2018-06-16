@@ -1,0 +1,98 @@
+{% extends "pas/base.html" %}
+
+{% block content-header %}
+    <h1 id="content-header-text">
+        Warning access
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Warning</li>
+    </ol>
+{% endblock content-header %}
+
+{% block content %}
+    {% load tz %}
+    {% localtime on %}
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        {#                    <h3 class="box-title">Devices Info table</h3>#}
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body table-responsive">
+                        <table id="pas_datatables_warning" class="table table-bordered table-hover" width="100%">
+                            <thead>
+                            <tr>
+                                <th>{{ 'Avatar' }}
+                                <th>{{ 'Log image' }}</th>
+                                <th>{{ 'Name' }}</th>
+                                <th>{{ 'State' }}</th>
+                                <th>{{ 'Time' }}</th>
+                                <th style="text-align: center;">{{ 'Actions' }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for log in logs_warning %}
+                                <tr>
+                                    <td>
+                                        <img class="img-circle"
+                                             src="{{ MEDIA_URL }}{% if log.member.avatar %}{{ log.member.avatar }}{% else %}/avatar.png{% endif %}"
+                                             alt="avatar" width="50">
+                                    </td>
+                                    <td>
+                                        <img class="img-circle" src="{{ MEDIA_URL }}{{ log.image }}"
+                                             alt="user" width="50">
+                                    </td>
+                                    <td>
+                                        <a href="{% url 'member-profile' %}?id={{ log.member.id }}">{{ log.member.name }}</a>
+                                    </td>
+                                    <td>
+                                        {% if log.is_go_in %}
+                                            <div class="form-group has-success">
+                                                <label class="control-label">
+                                                    <i class="fa fa-arrow-circle-o-right"></i> Go in
+                                                </label>
+                                            </div>
+                                        {% else %}
+                                            <div class="form-group has-warning">
+                                                <label class="control-label">
+                                                    <i class="fa fa-arrow-circle-o-left"></i> Go out
+                                                </label>
+                                            </div>
+                                        {% endif %}
+                                    </td>
+                                    <td>{{ log.time_stamp|date:"Y-m-d H:i:s" }}</td>
+                                    <td class="actions_column" style="text-align: center;">
+                                        <button type="button" class="btn btn-default btn_verify_member"
+                                                data-time_stamp="{{ log.time_stamp|date:"Y-m-d H:i:s" }}"
+                                                data-id="{{ log.member.id }}">
+                                            <i class="fa fa-question-circle"></i> Verify
+                                        </button>
+                                        <button type="button" class="btn btn-warning btn_discard_member"
+                                                data-time_stamp="{{ log.time_stamp|date:"Y-m-d H:i:s" }}"
+                                                data-id="{{ log.member.id }}">
+                                            <i class="fa fa-warning"></i> Discard
+                                        </button>
+
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    {% endlocaltime %}
+
+{% endblock content %}
+
+{% block scripts %}
+    {% load static %}
+    <script type="text/javascript" src="{% static '/pas/js/warning.js' %}"></script>
+{% endblock scripts %}

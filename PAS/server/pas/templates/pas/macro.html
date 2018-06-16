@@ -1,0 +1,8 @@
+{% macro render_btn(id, size='btn-xs', type='btn-default', modal_target='modal', title="", css_class='plus' -%}
+    <button type="button" class="btn {{ id }} {{ size }} {{ type }}"
+            data-toggle="modal"
+            data-target="#{{ modal_target }}">
+        <span class="fa fa-{{ css_class }}"></span>
+        {% if title %}{{ title }}{% endif %}
+    </button>
+{%- endmacro %}

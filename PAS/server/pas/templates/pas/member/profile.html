@@ -1,0 +1,279 @@
+{% extends "pas/base.html" %}
+
+{% block styles %}
+    <style type="text/css">
+        label {
+            text-align: left !important;
+            padding-top: 0px !important;
+        }
+
+        .form-horizontal .form-group {
+            margin-bottom: 5px !important;
+        }
+
+        .text-muted {
+            text-align: center;
+        }
+
+        .label-profile {
+            font-weight: 100 !important;
+        }
+
+        video {
+            max-width: 100%;
+            border: 5px solid yellow;
+            border-radius: 9px;
+            max-width: 500px;
+            margin: 10px;
+        }
+    </style>
+{% endblock styles %}
+
+{% block content-header %}
+    <h1 id="content-header-text">
+        Member profile
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Member profile</li>
+    </ol>
+{% endblock content-header %}
+
+{% block content %}
+    {% load static %}
+    <div class="row">
+        <div class="col-lg-4 col-xlg-3 col-md-5">
+            <div class="box box-primary">
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <img class="img-responsive img-circle member_detail_avatar" id="img_member_avatar"
+                         src="{{ MEDIA_URL }}{% if member.avatar %}{{ member.avatar }}{% else %}/avatar.png{% endif %}"
+                         alt="Photo">
+                    <br>
+                    <div class="row change_avatar_container" style="display: none;">
+                        <div class="col-sm-8">
+                            <input type="file" data-id="{{ member.id }}" class="btn btn-block" id="upload_avatar"/>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" class="btn btn-default" style="padding: 2px 6px; margin-top: 2px;"
+                                    id="btn_cancel_change_avatar">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                    <button type="file" data-id="{{ member.id }}" class="btn btn-block" id="btn_change_avatar">Change
+                        avatar
+                    </button>
+
+                    <hr/>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="member_name" class="label-profile col-sm-5 control-label">
+                                <i class="fa fa-info-circle margin-r-5"></i>Name:</label>
+                            <div class="col-sm-7">
+                                <label id="member_name">{{ member.name }}</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail1" class="label-profile col-sm-5 control-label">
+                                <i class="fa fa-graduation-cap margin-r-5"></i>Course:</label>
+                            <div class="col-sm-7">
+                                <label id="inputEmail1">{{ member.course }}</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="label-profile col-sm-5 control-label">
+                                <i class="fa fa-envelope margin-r-5"></i>Email:</label>
+                            <div class="col-sm-7">
+                                <label id="inputEmail3">{{ member.email }}</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="label-profile col-sm-5 control-label">
+                                <i class="fa fa-calendar margin-r-5"></i>Register day:</label>
+                            <div class="col-sm-7">
+                                <label id="inputPassword3">{{ member.registered_day }}</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword4" class="label-profile col-sm-5 control-label">
+                                <i class="fa fa-book margin-r-5"></i>Research about:</label>
+                            <div class="col-sm-7">
+                                <label id="inputPassword4">{{ member.research_about }}</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword5" class="label-profile col-sm-5 control-label">
+                                <i class="fa fa-smile-o margin-r-5"></i>Recognize label:</label>
+                            <div class="col-sm-7">
+                                <label id="inputPassword5">{{ member.recognize_label }}</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="member_threshold" class="label-profile col-sm-5 control-label">
+                                <i class="fa fa-check-square-o margin-r-5"></i>Threshold:</label>
+                            <div class="col-sm-7">
+                                <label id="member_threshold">{{ member.threshold }}</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+        <div class="col-lg-8 col-xlg-3 col-md-7">
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab_time_line" data-toggle="tab" aria-expanded="false">Logs</a>
+                    </li>
+                    <li class=""><a href="#tab_recognize" data-toggle="tab" aria-expanded="false">Regonize</a></li>
+                    <li class=""><a href="#tab_settings" data-toggle="tab" aria-expanded="true">Settings</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab_time_line">
+                        <div class="table-responsive m-t-40">
+                            <table class="table table-hover v-middle" id="table_time_line">
+                                <thead>
+                                <tr>
+                                    <th> Date</th>
+                                    <th> Work time</th>
+                                    <th> Earnings</th>
+                                    <th> Reviews</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for m in moneys %}
+                                    <tr>
+                                        <td>{{ m.date|date:"d-m-Y" }}</td>
+                                        <td>{{ m.total_hour }}</td>
+                                        <td> $100</td>
+                                        <td>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star-half-full text-warning"></i>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                            <div class="text-center">
+                                <button class="btn btn-success" id="btn_get_more_calculate_money"
+                                        data-id="{{ member.id }}">
+                                    Check more
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.tab-pane -->
+                    <div class="tab-pane" id="tab_recognize">
+                        <strong><i class="fa fa-video-camera margin-r-5"></i>
+                            Recognize train:
+                            {% if member.is_train %}
+                                <span style="color: green" id="member_train_warning">
+                                    Done!
+                                </span>
+                            {% else %}
+                                <span style="color: red" id="member_train_warning">
+                                    Did not get video to train!
+                                </span>
+                            {% endif %}
+                        </strong>
+
+                        <br/>
+                        <video id="your-video-id" controls="" autoplay=""></video>
+                        <br/>
+
+{#                        <button type="button" id="start_get_video_train" class="btn btn-default"#}
+{#                                data-name="{{ member.name }}" data-id="{{ member.id }}">#}
+{#                            Start video#}
+{#                        </button>#}
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-warning" id="start_get_video_train"
+                                    data-name="{{ member.name }}" data-id="{{ member.id }}"
+                                    {% if member.is_train %}
+                                    disabled
+                                    {% endif %}>
+                                Get video now
+                            </button>
+                            <button type="button" class="btn btn-warning" id="btn_train"
+                                    data-id="{{ member.id }}"
+                                    {% if member.is_train %}
+                                    disabled
+                                    {% endif %}
+                                    data-loading-text="<i class='fa fa-spinner fa-spin'></i> Training..."
+                                    data-disabled="disabled">
+                                Train
+                            </button>
+                        </div>
+
+                        <hr>
+
+                        <strong><i class="fa fa-credit-card margin-r-5"></i> Card ID</strong>
+
+                        <p class="text-muted" id="card-id">{{ member.card_id }}</p>
+                        <button class="btn btn-primary" id="btn-save-change-card" style="display: none;">Save</button>
+                        <button class="btn btn-default" id="btn-cancel-change-card" style="display: none;">Cancel</button>
+                        <button class="btn btn-default" id="btn-change-card"
+                                data-loading-text="<i class='fa fa-spinner fa-spin'></i> Waiting card id...">
+                            Change
+                        </button>
+                    </div>
+                    <!-- /.tab-pane -->
+                    <div class="tab-pane" id="tab_settings">
+                        <form role="form">
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="edit_member_email">Email</label>
+                                    <input type="email" class="form-control" id="edit_member_email"
+                                           placeholder="{{ member.email }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit_member_name">Name</label>
+                                    <input type="email" class="form-control" id="edit_member_name"
+                                           placeholder="{{ member.name }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit_member_course">Course</label>
+                                    <input type="text" class="form-control" id="edit_member_course"
+                                           placeholder="{{ member.course }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit_member_research_about">Research about</label>
+                                    <input type="text" class="form-control" id="edit_member_research_about"
+                                           placeholder="{{ member.research_about }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit_member_coefficient">Coefficient</label>
+                                    <input type="text" class="form-control" id="edit_member_coefficient"
+                                           placeholder="{{ member.coefficient }}">
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+
+                            <div class="box-footer">
+                                <button type="button" class="btn btn-primary">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.tab-pane -->
+                </div>
+                <!-- /.tab-content -->
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+{% block scripts %}
+    {% load static %}
+    <script type="text/javascript" src="{% static '/pas/bower_components/recordrtc/RecordRTC.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/pas/bower_components/moment/moment.js' %}"></script>
+    <script type="text/javascript" src="{% static '/pas/js/plugins/mqtt.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/pas/js/profile.js' %}"></script>
+
+{% endblock scripts %}

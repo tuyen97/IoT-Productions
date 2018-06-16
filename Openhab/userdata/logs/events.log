@@ -1,0 +1,515 @@
+2018-03-24 09:57:18.151 [thome.event.ExtensionEvent] - Extension 'package-standard' has been installed.
+2018-03-24 09:57:35.199 [thome.event.ExtensionEvent] - Extension 'ui-homebuilder' has been installed.
+2018-03-24 09:57:35.201 [thome.event.ExtensionEvent] - Extension 'ui-basic' has been installed.
+2018-03-24 09:57:35.210 [thome.event.ExtensionEvent] - Extension 'ui-habpanel' has been installed.
+2018-03-24 09:57:35.211 [thome.event.ExtensionEvent] - Extension 'ui-paper' has been installed.
+2018-03-29 23:57:31.954 [thome.event.ExtensionEvent] - Extension 'binding-mqtt1' has been installed.
+2018-03-30 00:43:01.559 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to start_webcam
+2018-03-30 00:57:42.169 [ome.event.ItemUpdatedEvent] - Item 'RFID_At_Entry' has been updated.
+2018-03-30 00:58:08.887 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to start_webcam
+2018-03-30 00:59:51.554 [ome.event.ItemUpdatedEvent] - Item 'RFID_At_Entry' has been updated.
+2018-03-30 01:01:16.916 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to start_webcam
+2018-03-30 01:01:47.790 [ome.event.ItemUpdatedEvent] - Item 'RFID_At_Entry' has been updated.
+2018-03-30 01:02:13.579 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to 1522346533567
+2018-03-30 01:03:50.840 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522346533567 to 1522346630816
+2018-03-30 01:04:42.780 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522346630816 to 1522346682773
+2018-03-30 01:06:14.610 [ome.event.ItemUpdatedEvent] - Item 'RFID_At_Entry' has been updated.
+2018-03-30 01:06:29.029 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to 1522346789020
+2018-03-30 01:06:46.099 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522346789020 to 1522346806093
+2018-03-30 01:07:19.318 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522346806093 to 1522346839310
+2018-03-30 01:10:57.348 [ome.event.ItemUpdatedEvent] - Item 'RFID_At_Entry' has been updated.
+2018-03-30 01:11:51.988 [ome.event.ItemUpdatedEvent] - Item 'RFID_At_Entry' has been updated.
+2018-03-30 01:12:25.976 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to 1522347145966
+2018-03-30 01:16:46.058 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to 1522347405991
+2018-03-30 01:16:50.529 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522347405991 to 1522347410505
+2018-03-30 01:29:57.858 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522347410505 to 1522348197828
+2018-03-30 01:34:55.414 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to 1522348495336
+2018-03-30 01:43:41.926 [ome.event.ItemUpdatedEvent] - Item 'RFID_At_Entry' has been updated.
+2018-03-30 01:44:35.138 [ome.event.ItemUpdatedEvent] - Item 'RFID_At_Entry' has been updated.
+2018-03-30 01:44:44.825 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to 1522349084806
+2018-03-30 01:44:53.264 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522349084806 to 1522349093257
+2018-03-30 01:44:59.946 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522349093257 to 1522349099938
+2018-03-30 01:59:51.402 [thome.event.ExtensionEvent] - Extension 'binding-network' has been installed.
+2018-03-30 01:59:57.462 [thome.event.ExtensionEvent] - Extension 'binding-mqtt1' has been uninstalled.
+2018-03-30 02:00:14.948 [thome.event.ExtensionEvent] - Extension 'binding-http1' has been installed.
+2018-03-30 08:55:21.959 [ome.event.ItemUpdatedEvent] - Item 'RFID_At_Entry' has been updated.
+2018-03-30 08:58:39.123 [ome.event.ItemUpdatedEvent] - Item 'RFID_At_Entry' has been updated.
+2018-03-30 10:54:44.961 [ome.event.ItemCommandEvent] - Item 'red_led' received command ON
+2018-03-30 10:54:45.261 [ome.event.ItemCommandEvent] - Item 'red_led' received command OFF
+2018-03-30 10:54:45.398 [vent.ItemStateChangedEvent] - red_led changed from NULL to ON
+2018-03-30 10:54:45.400 [vent.ItemStateChangedEvent] - red_led changed from ON to OFF
+2018-03-30 10:54:46.003 [ome.event.ItemCommandEvent] - Item 'red_led' received command ON
+2018-03-30 10:54:46.007 [vent.ItemStateChangedEvent] - red_led changed from OFF to ON
+2018-03-30 10:54:46.855 [ome.event.ItemCommandEvent] - Item 'red_led' received command OFF
+2018-03-30 10:54:46.860 [vent.ItemStateChangedEvent] - red_led changed from ON to OFF
+2018-03-30 10:54:47.426 [ome.event.ItemCommandEvent] - Item 'red_led' received command ON
+2018-03-30 10:54:47.436 [vent.ItemStateChangedEvent] - red_led changed from OFF to ON
+2018-03-30 10:54:48.569 [ome.event.ItemCommandEvent] - Item 'red_led' received command OFF
+2018-03-30 10:54:48.579 [vent.ItemStateChangedEvent] - red_led changed from ON to OFF
+2018-03-30 11:31:23.783 [ome.event.ItemCommandEvent] - Item 'red_led' received command ON
+2018-03-30 11:31:23.793 [vent.ItemStateChangedEvent] - red_led changed from OFF to ON
+2018-03-30 11:31:25.137 [ome.event.ItemCommandEvent] - Item 'red_led' received command OFF
+2018-03-30 11:31:25.148 [vent.ItemStateChangedEvent] - red_led changed from ON to OFF
+2018-03-30 11:31:25.685 [ome.event.ItemCommandEvent] - Item 'red_led' received command ON
+2018-03-30 11:31:25.686 [vent.ItemStateChangedEvent] - red_led changed from OFF to ON
+2018-03-30 11:31:26.207 [ome.event.ItemCommandEvent] - Item 'red_led' received command OFF
+2018-03-30 11:31:26.213 [vent.ItemStateChangedEvent] - red_led changed from ON to OFF
+2018-03-30 11:31:27.338 [ome.event.ItemCommandEvent] - Item 'red_led' received command ON
+2018-03-30 11:31:27.343 [vent.ItemStateChangedEvent] - red_led changed from OFF to ON
+2018-03-30 11:31:47.333 [ome.event.ItemCommandEvent] - Item 'red_led' received command OFF
+2018-03-30 11:31:47.337 [vent.ItemStateChangedEvent] - red_led changed from ON to OFF
+2018-03-30 12:28:56.746 [ome.event.ItemCommandEvent] - Item 'red_led' received command ON
+2018-03-30 12:28:56.782 [vent.ItemStateChangedEvent] - red_led changed from OFF to ON
+2018-03-30 12:48:58.401 [ome.event.ItemCommandEvent] - Item 'red_led' received command ON
+2018-03-30 12:48:58.409 [vent.ItemStateChangedEvent] - red_led changed from NULL to ON
+2018-03-30 12:49:08.756 [ome.event.ItemCommandEvent] - Item 'red_led' received command OFF
+2018-03-30 12:49:08.761 [vent.ItemStateChangedEvent] - red_led changed from ON to OFF
+2018-03-30 20:09:03.427 [thome.event.ExtensionEvent] - Extension 'binding-mqtt1' has been installed.
+2018-03-30 20:22:43.158 [vent.ItemStateChangedEvent] - dong changed from NULL to aaaaaaaaa
+2018-03-30 20:24:06.221 [vent.ItemStateChangedEvent] - dong changed from aaaaaaaaa to dong dz
+2018-03-30 20:24:13.111 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to dqdq
+2018-03-30 20:24:31.255 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from dqdq to 1522416271242
+2018-03-30 20:25:12.552 [vent.ItemStateChangedEvent] - led_action changed from NULL to 1522416312543
+2018-03-30 20:25:38.126 [vent.ItemStateChangedEvent] - dong changed from dong dz to 1522416338118
+2018-03-30 21:07:23.202 [vent.ItemStateChangedEvent] - led_action changed from 1522416312543 to 1522418843186
+2018-03-30 21:07:40.976 [vent.ItemStateChangedEvent] - dong changed from 1522416338118 to 1522418860970
+2018-03-30 21:07:46.579 [vent.ItemStateChangedEvent] - led_action changed from 1522418843186 to 1522418866569
+2018-03-30 21:08:02.084 [vent.ItemStateChangedEvent] - led_action changed from 1522418866569 to 1522418882077
+2018-03-30 21:08:10.148 [vent.ItemStateChangedEvent] - dong changed from 1522418860970 to 1522418890142
+2018-03-30 21:14:48.660 [vent.ItemStateChangedEvent] - dong changed from 1522418890142 to 1522419288640
+2018-03-30 21:15:05.454 [vent.ItemStateChangedEvent] - led_action changed from 1522418882077 to 1522419305448
+2018-03-30 21:15:15.017 [vent.ItemStateChangedEvent] - led_action changed from 1522419305448 to 1522419315008
+2018-03-30 21:15:23.798 [vent.ItemStateChangedEvent] - dong changed from 1522419288640 to 1522419323792
+2018-03-30 21:15:31.733 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522416271242 to 1522419331705
+2018-03-30 21:15:33.346 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522419331705 to 1522419333329
+2018-03-30 21:15:35.629 [vent.ItemStateChangedEvent] - dong changed from 1522419323792 to 1522419335622
+2018-03-30 21:15:48.475 [vent.ItemStateChangedEvent] - led_action changed from 1522419315008 to 1522419348459
+2018-03-30 21:15:54.009 [vent.ItemStateChangedEvent] - dong changed from 1522419335622 to 1522419354003
+2018-03-30 21:16:04.029 [vent.ItemStateChangedEvent] - dong changed from 1522419354003 to 1522419364024
+2018-03-30 21:16:10.382 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522419333329 to 1522419370370
+2018-03-30 21:16:17.405 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522419370370 to 1522419377397
+2018-03-30 21:17:36.104 [vent.ItemStateChangedEvent] - led_action changed from 1522419348459 to 1522419456094
+2018-03-30 21:18:46.298 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522419377397 to 1522419526281
+2018-03-30 21:18:50.361 [vent.ItemStateChangedEvent] - dong changed from 1522419364024 to 1522419530354
+2018-03-30 21:25:17.546 [vent.ItemStateChangedEvent] - led_action changed from 1522419456094 to 1522419917534
+2018-03-30 21:25:17.730 [ome.event.ItemCommandEvent] - Item 'green_led' received command ON
+2018-03-30 21:25:17.763 [vent.ItemStateChangedEvent] - green_led changed from NULL to ON
+2018-03-30 21:29:39.446 [vent.ItemStateChangedEvent] - led_action changed from NULL to 1522420179439
+2018-03-30 21:29:39.540 [ome.event.ItemCommandEvent] - Item 'green_led' received command ON
+2018-03-30 21:29:39.554 [vent.ItemStateChangedEvent] - green_led changed from NULL to ON
+2018-03-30 21:58:44.942 [vent.ItemStateChangedEvent] - dong changed from 1522419530354 to 1522421924930
+2018-03-30 22:28:00.815 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522419526281 to 1522423680806
+2018-03-30 22:28:21.457 [vent.ItemStateChangedEvent] - dong changed from 1522421924930 to 1522423701452
+2018-03-30 22:29:10.827 [vent.ItemStateChangedEvent] - auth_result changed from NULL to OK
+2018-03-30 22:30:42.651 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-03-30 22:30:42.791 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-30 22:30:42.796 [vent.ItemStateChangedEvent] - blue_led changed from NULL to ON
+2018-03-30 22:46:42.965 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to ON
+2018-03-30 22:46:43.087 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-30 22:46:43.091 [ome.event.ItemCommandEvent] - Item 'green_led' received command OFF
+2018-03-30 22:46:43.098 [vent.ItemStateChangedEvent] - green_led changed from ON to OFF
+2018-03-30 22:47:21.837 [vent.ItemStateChangedEvent] - auth_result changed from ON to FAIL
+2018-03-30 22:47:21.842 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-30 22:47:21.860 [ome.event.ItemCommandEvent] - Item 'green_led' received command OFF
+2018-03-30 22:47:29.904 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-03-30 22:47:29.914 [ome.event.ItemCommandEvent] - Item 'green_led' received command ON
+2018-03-30 22:47:29.918 [vent.ItemStateChangedEvent] - green_led changed from OFF to ON
+2018-03-30 23:30:19.898 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-03-30 23:30:20.214 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-30 23:30:20.244 [vent.ItemStateChangedEvent] - yellow_led changed from NULL to OFF
+2018-03-30 23:43:09.765 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-03-30 23:43:10.192 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-30 23:43:10.200 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-03-30 23:43:10.208 [vent.ItemStateChangedEvent] - red_led changed from NULL to OFF
+2018-03-30 23:43:27.695 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-03-30 23:43:27.704 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-30 23:43:27.713 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-03-30 23:43:35.988 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-03-30 23:43:35.994 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-30 23:43:36.014 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-03-30 23:48:01.545 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-03-30 23:48:01.929 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-30 23:48:01.947 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-03-30 23:48:01.959 [vent.ItemStateChangedEvent] - green_led changed from ON to OFF
+2018-03-30 23:49:32.206 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-03-30 23:49:32.563 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-30 23:49:32.568 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-03-30 23:49:32.571 [vent.ItemStateChangedEvent] - green_led changed from OFF to ON
+2018-03-30 23:49:32.579 [vent.ItemStateChangedEvent] - blue_led changed from ON to OFF
+2018-03-30 23:49:32.591 [vent.ItemStateChangedEvent] - auth_result changed from OK to WAIT
+2018-03-30 23:49:39.602 [vent.ItemStateChangedEvent] - auth_result changed from WAIT to OK
+2018-03-30 23:49:39.603 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-30 23:49:39.633 [vent.ItemStateChangedEvent] - auth_result changed from OK to WAIT
+2018-03-30 23:49:57.955 [vent.ItemStateChangedEvent] - auth_result changed from WAIT to OK
+2018-03-30 23:49:57.959 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-30 23:49:57.966 [vent.ItemStateChangedEvent] - auth_result changed from OK to WAIT
+2018-03-30 23:50:04.284 [vent.ItemStateChangedEvent] - auth_result changed from WAIT to FAIL
+2018-03-30 23:50:04.294 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-30 23:50:04.302 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-03-30 23:50:04.303 [vent.ItemStateChangedEvent] - green_led changed from ON to OFF
+2018-03-30 23:50:04.304 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to WAIT
+2018-03-30 23:50:04.305 [vent.ItemStateChangedEvent] - blue_led changed from OFF to ON
+2018-03-30 23:50:05.502 [vent.ItemStateChangedEvent] - auth_result changed from WAIT to FAIL
+2018-03-30 23:50:05.508 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-30 23:50:05.536 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to WAIT
+2018-03-30 23:55:33.852 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-30 23:55:33.873 [vent.ItemStateChangedEvent] - auth_result changed from WAIT to OK
+2018-03-30 23:55:34.130 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-30 23:55:34.144 [vent.ItemStateChangedEvent] - green_led changed from OFF to ON
+2018-03-30 23:55:34.145 [vent.ItemStateChangedEvent] - blue_led changed from ON to OFF
+2018-03-30 23:55:34.147 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-03-30 23:55:51.066 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-30 23:55:51.074 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-30 23:55:53.879 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-03-30 23:55:53.886 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-30 23:55:53.907 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-03-30 23:58:58.095 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-30 23:58:58.102 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-03-30 23:58:58.359 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-31 00:00:16.540 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 00:00:16.798 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-31 00:00:16.807 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-03-31 00:07:19.445 [ome.event.ItemUpdatedEvent] - Item 'RFID_At_Entry' has been updated.
+2018-03-31 00:08:38.859 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to 1522429718846
+2018-03-31 00:23:05.878 [ome.event.ItemUpdatedEvent] - Item 'RFID_At_Entry' has been updated.
+2018-03-31 00:26:49.170 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to 1522430809149
+2018-03-31 00:40:55.371 [ome.event.ItemUpdatedEvent] - Item 'auth_result' has been updated.
+2018-03-31 00:45:01.150 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 00:45:01.159 [vent.ItemStateChangedEvent] - auth_result changed from NULL to OK
+2018-03-31 08:32:51.493 [vent.ItemStateChangedEvent] - dong changed from 1522423701452 to hello world
+2018-03-31 09:07:10.659 [vent.ItemStateChangedEvent] - dong changed from hello world to 1522462030646
+2018-03-31 09:07:59.244 [vent.ItemStateChangedEvent] - dong changed from 1522462030646 to hello world
+2018-03-31 09:08:43.792 [vent.ItemStateChangedEvent] - dong changed from hello world to hello dong
+2018-03-31 09:14:06.839 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 09:14:07.202 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-31 09:14:07.243 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-03-31 09:14:07.244 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-03-31 09:31:51.523 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 09:31:51.545 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-31 09:31:51.552 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-03-31 09:31:51.570 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-03-31 09:36:25.471 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 09:36:25.492 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-31 09:36:25.497 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-03-31 09:36:25.538 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-03-31 09:36:32.229 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-03-31 09:36:32.233 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-03-31 09:36:32.243 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-31 09:36:32.248 [vent.ItemStateChangedEvent] - blue_led changed from OFF to ON
+2018-03-31 09:36:32.257 [vent.ItemStateChangedEvent] - green_led changed from ON to OFF
+2018-03-31 09:54:50.873 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 09:54:50.884 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-03-31 09:54:59.681 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-03-31 09:54:59.694 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-03-31 09:54:59.715 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-31 09:55:03.092 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 09:55:03.099 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-03-31 09:55:03.113 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-31 09:55:03.120 [vent.ItemStateChangedEvent] - green_led changed from OFF to ON
+2018-03-31 09:55:03.124 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-03-31 09:55:03.126 [vent.ItemStateChangedEvent] - blue_led changed from ON to OFF
+2018-03-31 09:55:03.140 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-03-31 10:04:21.133 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522430809149 to 1522465461121
+2018-03-31 10:04:29.094 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 10:04:29.101 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-31 10:04:29.129 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-03-31 10:04:36.272 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-03-31 10:04:36.286 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-03-31 10:04:36.313 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-31 10:04:36.316 [vent.ItemStateChangedEvent] - blue_led changed from OFF to ON
+2018-03-31 10:04:36.327 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-03-31 10:04:36.329 [vent.ItemStateChangedEvent] - green_led changed from ON to OFF
+2018-03-31 10:11:31.998 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522465461121 to 1522465891986
+2018-03-31 10:12:18.710 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-03-31 10:12:18.720 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-31 10:13:11.315 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522465891986 to 1522465991307
+2018-03-31 10:13:15.324 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 10:13:15.328 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-03-31 10:13:18.687 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 10:13:18.698 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-31 10:13:18.703 [vent.ItemStateChangedEvent] - green_led changed from OFF to ON
+2018-03-31 10:13:18.708 [vent.ItemStateChangedEvent] - blue_led changed from ON to OFF
+2018-03-31 10:13:18.709 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-03-31 10:13:24.593 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522465991307 to 1522466004585
+2018-03-31 10:13:27.265 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-03-31 10:13:27.275 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-03-31 10:13:27.276 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-31 10:13:27.290 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-03-31 10:13:27.297 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-31 10:13:27.307 [vent.ItemStateChangedEvent] - green_led changed from ON to OFF
+2018-03-31 10:13:27.308 [vent.ItemStateChangedEvent] - blue_led changed from OFF to ON
+2018-03-31 10:14:03.334 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 10:14:03.341 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-03-31 10:14:03.343 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-31 10:14:10.733 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-03-31 10:14:10.740 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-03-31 10:14:10.742 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-31 10:14:13.422 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 10:14:13.423 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-03-31 10:14:13.425 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-31 10:14:17.702 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 10:14:17.712 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-31 10:14:17.716 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-03-31 10:14:17.724 [vent.ItemStateChangedEvent] - green_led changed from OFF to ON
+2018-03-31 10:14:17.725 [vent.ItemStateChangedEvent] - blue_led changed from ON to OFF
+2018-03-31 10:14:17.727 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-03-31 10:21:56.208 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522466004585 to 1522466516185
+2018-03-31 10:21:59.449 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 10:21:59.505 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-31 10:21:59.525 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-03-31 10:21:59.529 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-03-31 10:22:07.006 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522466516185 to 1522466526994
+2018-03-31 10:22:09.326 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-03-31 10:22:09.336 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-31 10:22:09.382 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-03-31 10:22:09.386 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-03-31 10:22:09.391 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-03-31 10:22:19.243 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522466526994 to 1522466539238
+2018-03-31 10:22:24.474 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-03-31 10:22:24.502 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-31 10:22:24.513 [vent.ItemStateChangedEvent] - blue_led changed from OFF to ON
+2018-03-31 10:22:24.521 [vent.ItemStateChangedEvent] - green_led changed from ON to OFF
+2018-03-31 10:22:38.484 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522466539238 to 1522466558463
+2018-03-31 10:22:42.078 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-03-31 10:22:42.095 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-31 10:22:44.046 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522466558463 to 1522466564039
+2018-03-31 10:22:52.069 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-03-31 10:22:52.083 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-31 10:22:56.954 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522466564039 to 1522466576941
+2018-03-31 10:23:00.053 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 10:23:00.057 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-31 10:23:00.091 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-03-31 10:23:12.658 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522466576941 to 1522466592653
+2018-03-31 10:23:16.665 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-03-31 10:23:16.668 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-03-31 10:23:16.689 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-31 10:23:22.445 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522466592653 to 1522466602415
+2018-03-31 10:23:25.978 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 10:23:25.995 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-31 10:23:26.007 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-03-31 10:23:26.009 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-03-31 10:23:26.012 [vent.ItemStateChangedEvent] - green_led changed from OFF to ON
+2018-03-31 10:23:26.014 [vent.ItemStateChangedEvent] - blue_led changed from ON to OFF
+2018-03-31 10:23:26.016 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-03-31 10:23:34.956 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522466602415 to 1522466614947
+2018-03-31 10:23:38.836 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 10:23:38.843 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-31 10:23:38.874 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-03-31 10:23:38.884 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-03-31 10:23:46.158 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522466614947 to 1522466626153
+2018-03-31 10:23:47.878 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 10:23:47.912 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-31 10:23:47.922 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-03-31 10:23:47.930 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-03-31 10:23:51.530 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522466626153 to 1522466631525
+2018-03-31 10:23:57.928 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-03-31 10:23:57.947 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-03-31 10:23:57.948 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-03-31 10:23:57.963 [vent.ItemStateChangedEvent] - blue_led changed from OFF to ON
+2018-03-31 10:23:57.964 [vent.ItemStateChangedEvent] - green_led changed from ON to OFF
+2018-03-31 10:24:05.392 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522466631525 to 1522466645370
+2018-03-31 10:24:08.442 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-03-31 10:24:08.455 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-03-31 10:24:08.468 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-03-31 10:24:08.488 [vent.ItemStateChangedEvent] - green_led changed from OFF to ON
+2018-03-31 10:24:08.489 [vent.ItemStateChangedEvent] - blue_led changed from ON to OFF
+2018-03-31 10:24:08.511 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-04 13:56:24.437 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to 1522824984329
+2018-04-04 13:57:10.015 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522824984329 to 1522825029986
+2018-04-04 14:07:33.768 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522825029986 to 1522825653741
+2018-04-04 14:08:51.185 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-04 14:08:51.230 [vent.ItemStateChangedEvent] - auth_result changed from NULL to OK
+2018-04-04 14:08:52.374 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-04 14:08:52.398 [vent.ItemStateChangedEvent] - yellow_led changed from NULL to ON
+2018-04-04 14:08:52.400 [vent.ItemStateChangedEvent] - red_led changed from NULL to OFF
+2018-04-04 14:08:52.401 [vent.ItemStateChangedEvent] - green_led changed from NULL to ON
+2018-04-04 14:08:52.411 [vent.ItemStateChangedEvent] - blue_led changed from NULL to OFF
+2018-04-04 14:08:52.417 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-04 14:14:21.644 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522825653741 to 1522826061621
+2018-04-04 14:15:14.344 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-04-04 14:15:14.360 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-04-04 14:15:14.387 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-04-04 14:15:14.434 [vent.ItemStateChangedEvent] - green_led changed from ON to OFF
+2018-04-04 14:15:14.437 [vent.ItemStateChangedEvent] - blue_led changed from OFF to ON
+2018-04-04 14:21:12.066 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522826061621 to 1522826472009
+2018-04-04 14:22:22.846 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522826472009 to 1522826542830
+2018-04-04 14:23:33.593 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-04 14:23:33.622 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-04 14:23:33.628 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-04-04 14:23:33.647 [vent.ItemStateChangedEvent] - green_led changed from OFF to ON
+2018-04-04 14:23:33.648 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-04 14:23:33.657 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-04 14:23:33.659 [vent.ItemStateChangedEvent] - blue_led changed from ON to OFF
+2018-04-04 15:06:56.870 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522826542830 to 1522829216722
+2018-04-04 15:09:31.172 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522829216722 to 1522829371143
+2018-04-04 15:10:46.562 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-04 15:10:46.583 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-04 15:10:46.618 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-04 15:10:46.620 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-04 15:18:11.446 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522829371143 to 1522829891435
+2018-04-04 15:23:15.731 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-04-04 15:23:15.742 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-04 15:23:15.755 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-04-04 15:23:15.803 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-04-04 15:23:15.824 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-04 15:23:15.829 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-04 15:23:15.832 [vent.ItemStateChangedEvent] - green_led changed from ON to OFF
+2018-04-04 15:23:15.833 [vent.ItemStateChangedEvent] - blue_led changed from OFF to ON
+2018-04-04 19:04:22.480 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 1522829891435 to 12 34 AB CD
+2018-04-05 14:00:27.195 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to 12 34 AB CD
+2018-04-05 14:02:58.731 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-05 14:02:58.747 [vent.ItemStateChangedEvent] - auth_result changed from NULL to OK
+2018-04-05 14:02:58.781 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:02:58.796 [vent.ItemStateChangedEvent] - yellow_led changed from NULL to ON
+2018-04-05 14:02:58.799 [vent.ItemStateChangedEvent] - red_led changed from NULL to OFF
+2018-04-05 14:02:58.799 [vent.ItemStateChangedEvent] - green_led changed from NULL to ON
+2018-04-05 14:02:58.805 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 14:02:58.807 [vent.ItemStateChangedEvent] - blue_led changed from NULL to OFF
+2018-04-05 14:02:59.135 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:02:59.152 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 14:02:59.163 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 14:26:52.733 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 12 34 AB CD to 96 42 A9 AC
+2018-04-05 14:27:22.654 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-05 14:27:22.682 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:27:22.684 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:27:22.707 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 14:27:48.950 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 96 42 A9 AC to 5D 3F FE E9
+2018-04-05 14:30:34.944 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-05 14:30:34.954 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:30:34.962 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:30:34.978 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 14:30:34.981 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 14:30:34.984 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 14:30:47.189 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 5D 3F FE E9 to 96 42 A9 AC
+2018-04-05 14:30:50.245 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-05 14:30:50.258 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:30:50.259 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:30:50.293 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 14:30:50.295 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 14:30:50.298 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 14:30:50.300 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 14:31:08.416 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-04-05 14:31:08.420 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-04-05 14:31:08.423 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-04-05 14:31:08.425 [vent.ItemStateChangedEvent] - green_led changed from ON to OFF
+2018-04-05 14:31:08.427 [vent.ItemStateChangedEvent] - blue_led changed from OFF to ON
+2018-04-05 14:32:18.873 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-05 14:32:18.893 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-04-05 14:32:18.911 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:32:18.924 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:32:18.933 [vent.ItemStateChangedEvent] - green_led changed from OFF to ON
+2018-04-05 14:32:18.934 [vent.ItemStateChangedEvent] - blue_led changed from ON to OFF
+2018-04-05 14:32:18.936 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 14:32:18.945 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 14:32:31.295 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-05 14:32:31.301 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:32:31.319 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:32:31.330 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 14:32:31.339 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 14:32:59.477 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 96 42 A9 AC to 5D 3F FE E9
+2018-04-05 14:33:04.122 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-05 14:33:04.137 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:33:04.140 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:33:04.146 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 14:33:04.149 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 14:33:45.055 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 5D 3F FE E9 to 96 42 A9 AC
+2018-04-05 14:34:12.145 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-04-05 14:34:12.170 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-04-05 14:34:12.174 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-04-05 14:34:12.199 [vent.ItemStateChangedEvent] - blue_led changed from OFF to ON
+2018-04-05 14:34:12.208 [vent.ItemStateChangedEvent] - green_led changed from ON to OFF
+2018-04-05 14:34:36.738 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 96 42 A9 AC to 5D 3F FE E9
+2018-04-05 14:34:55.679 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-05 14:34:55.688 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-04-05 14:34:55.691 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-04-05 14:44:45.843 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 5D 3F FE E9 to 96 42 A9 AC
+2018-04-05 14:50:22.165 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-05 14:50:22.178 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:50:22.195 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:50:22.223 [vent.ItemStateChangedEvent] - green_led changed from OFF to ON
+2018-04-05 14:50:22.224 [vent.ItemStateChangedEvent] - blue_led changed from ON to OFF
+2018-04-05 14:50:22.225 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 14:50:22.227 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 14:50:22.234 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 14:51:40.837 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-05 14:51:40.849 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:51:40.858 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:51:40.862 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 14:51:40.862 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 14:51:40.876 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 14:53:40.355 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-05 14:53:40.366 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:53:40.378 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 14:53:40.379 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:53:40.398 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 14:53:40.400 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 14:53:40.403 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 14:57:05.660 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-05 14:57:05.678 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:57:05.680 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 14:57:05.692 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 14:57:05.695 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 14:57:05.704 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 15:05:09.929 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from 96 42 A9 AC to 5D 3F FE E9
+2018-04-05 15:05:44.704 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-05 15:05:44.710 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 15:05:44.717 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 15:05:44.722 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 15:05:44.723 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 15:32:49.253 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-04-05 15:32:49.258 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 15:32:49.295 [vent.ItemStateChangedEvent] - auth_result changed from OK to FAIL
+2018-04-05 15:32:49.300 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 16:42:37.969 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-04-05 16:42:38.238 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-04-05 16:42:38.239 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 16:42:38.240 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-04-05 16:42:38.241 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-04-05 16:42:38.241 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-04-05 16:42:38.242 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-06-03 10:24:02.836 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to 56 2E 7B AC
+2018-06-03 10:29:26.859 [ome.event.ItemCommandEvent] - Item 'auth_result' received command FAIL
+2018-06-03 10:29:26.895 [vent.ItemStateChangedEvent] - auth_result changed from NULL to FAIL
+2018-06-03 10:29:28.617 [ome.event.ItemCommandEvent] - Item 'blue_led' received command ON
+2018-06-03 10:29:28.649 [vent.ItemStateChangedEvent] - blue_led changed from NULL to ON
+2018-06-03 10:29:28.653 [vent.ItemStateChangedEvent] - yellow_led changed from NULL to OFF
+2018-06-03 10:29:28.659 [vent.ItemStateChangedEvent] - green_led changed from NULL to OFF
+2018-06-03 10:29:28.664 [vent.ItemStateChangedEvent] - red_led changed from NULL to OFF
+2018-06-03 10:31:39.266 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-06-03 10:31:39.298 [vent.ItemStateChangedEvent] - auth_result changed from FAIL to OK
+2018-06-03 10:31:39.300 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-06-03 10:31:39.303 [vent.ItemStateChangedEvent] - yellow_led changed from OFF to ON
+2018-06-03 10:31:39.308 [vent.ItemStateChangedEvent] - green_led changed from OFF to ON
+2018-06-03 10:31:39.317 [vent.ItemStateChangedEvent] - blue_led changed from ON to OFF
+2018-06-03 10:31:39.320 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-06-05 09:50:59.598 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to 56 2E 7B AC
+2018-06-05 09:51:01.159 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-06-05 09:51:01.184 [vent.ItemStateChangedEvent] - auth_result changed from NULL to OK
+2018-06-05 09:51:02.125 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-06-05 09:51:02.133 [vent.ItemStateChangedEvent] - yellow_led changed from NULL to ON
+2018-06-05 09:51:02.150 [vent.ItemStateChangedEvent] - red_led changed from NULL to OFF
+2018-06-05 09:51:02.172 [vent.ItemStateChangedEvent] - blue_led changed from NULL to OFF
+2018-06-05 09:51:02.174 [vent.ItemStateChangedEvent] - green_led changed from NULL to ON
+2018-06-05 09:51:02.176 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-06-09 16:11:19.814 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-06-09 16:11:19.958 [vent.ItemStateChangedEvent] - auth_result changed from NULL to OK
+2018-06-09 16:11:21.225 [ome.event.ItemCommandEvent] - Item 'yellow_led' received command ON
+2018-06-09 16:11:21.272 [vent.ItemStateChangedEvent] - yellow_led changed from NULL to ON
+2018-06-09 16:11:21.282 [vent.ItemStateChangedEvent] - red_led changed from NULL to OFF
+2018-06-09 16:11:21.292 [vent.ItemStateChangedEvent] - green_led changed from NULL to ON
+2018-06-09 16:11:21.298 [vent.ItemStateChangedEvent] - blue_led changed from NULL to OFF
+2018-06-09 16:11:21.302 [vent.ItemStateChangedEvent] - yellow_led changed from ON to OFF
+2018-06-09 16:15:24.452 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to 56 2E 7B AC
+2018-06-09 16:15:26.715 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-06-09 16:15:26.720 [vent.ItemStateChangedEvent] - auth_result changed from NULL to OK
+2018-06-09 16:15:27.154 [ome.event.ItemCommandEvent] - Item 'green_led' received command ON
+2018-06-09 16:15:27.161 [vent.ItemStateChangedEvent] - yellow_led changed from NULL to OFF
+2018-06-09 16:15:27.165 [vent.ItemStateChangedEvent] - red_led changed from NULL to OFF
+2018-06-09 16:15:27.169 [vent.ItemStateChangedEvent] - green_led changed from NULL to ON
+2018-06-10 09:54:27.618 [vent.ItemStateChangedEvent] - RFID_At_Entry changed from NULL to 56 2E 7B AC
+2018-06-10 09:54:32.145 [ome.event.ItemCommandEvent] - Item 'auth_result' received command OK
+2018-06-10 09:54:32.210 [vent.ItemStateChangedEvent] - auth_result changed from NULL to OK
+2018-06-10 09:54:32.822 [ome.event.ItemCommandEvent] - Item 'green_led' received command ON
+2018-06-10 09:54:32.854 [vent.ItemStateChangedEvent] - red_led changed from NULL to OFF
+2018-06-10 09:54:32.869 [vent.ItemStateChangedEvent] - yellow_led changed from NULL to OFF
+2018-06-10 09:54:32.872 [vent.ItemStateChangedEvent] - green_led changed from NULL to ON

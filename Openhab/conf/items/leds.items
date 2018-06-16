@@ -1,0 +1,5 @@
+String auth_result <server> {mqtt="<[mosquitto:pas/mqtt/icse/auth:command:default]"}
+
+Switch green_led {mqtt=">[mosquitto:pas/mqtt/led/green:command:ON:ON],>[mosquitto:pas/mqtt/led/green:command:OFF:OFF]"}
+Switch red_led {mqtt=">[mosquitto:pas/mqtt/led/red:command:ON:ON],>[mosquitto:pas/mqtt/led/red:command:OFF:OFF]"}
+Switch yellow_led {mqtt=">[mosquitto:pas/mqtt/led/yellow:command:ON:ON],>[mosquitto:pas/mqtt/led/yellow:command:OFF:OFF]"}

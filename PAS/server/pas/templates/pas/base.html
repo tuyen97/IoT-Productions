@@ -1,0 +1,216 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard</title>
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pas/bower_components/bootstrap/dist/css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'pas/bower_components/font-awesome/css/font-awesome.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'pas/dist/css/AdminLTE.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'pas/dist/css/skins/_all-skins.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'pas/css/dashboard.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'pas/css/toastr.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'pas/css/select2.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'pas/css/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'pas/js/plugins/datatables/jquery.dataTables.css' %}"/>
+
+    {% block styles %}
+    {% endblock styles %}
+
+    <script type="text/javascript" src="{% static '/pas/js/plugins/jquery-3.2.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/pas/js/plugins/toastr.min.js' %}"></script>
+
+    <script>
+        toastr.options.progressBar = true;
+        toastr.options.extendedTimeOut = 3000;
+        toastr.options.closeButton = true;
+    </script>
+
+
+</head>
+
+<!--<body class="fixed sidebar-mini sidebar-mini-expand-feature skin-black-light">-->
+<body class="sidebar-mini skin-blue">
+<div class="wrapper">
+    <header class="main-header">
+        <!-- Header Navbar: style can be found in header.less -->
+        <a href="/pas" class="logo">
+            <span class="logo-lg"><b>PAS</b></span>
+        </a>
+        <nav class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+
+            <div class="navbar-custom-menu">
+                {% if user.is_authenticated %}
+                    <ul class="nav navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                        {% if user.is_staff %}
+                            <li class="messages-menu">
+                                <a href="#">
+                                    <i class="fa fa-cogs"></i> Admin site
+                                </a>
+                            </li>
+                        {% endif %}
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <span> <i class="caret"></i></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header bg-light-blue">
+                                    <img src="
+                                            {{ MEDIA_URL }}{% if user.avatar %}{{ user.avatar }}{% else %}/avatar.png{% endif %}"
+                                         class="img-circle" alt="User Image">
+                                    <p>
+                                        {{ user.name }}
+                                    </p>
+                                </li>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="{% url 'member-profile' %}?id={{ user.id }}"
+                                           class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="{% url 'logout' %}" class="btn btn-default btn-flat">Log out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+    <!-- Sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <ul class="sidebar-menu" id="sidebar-menu">
+                <li class="active pas-sidebar-element">
+                    <a href="{% url 'index' %}" id="dashboard">
+                        <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                {% if user.is_staff %}
+                    <li class="pas-sidebar-element">
+                        <a href="{% url 'members-info' %}" id="members-info">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                            <span>Members</span>
+                        </a>
+                    </li>
+                    <li class="pas-sidebar-element">
+                        <a href="{% url 'warning' %}" id="warning_sidebar">
+                            <i class="fa fa-warning" aria-hidden="true"></i>
+                            <span>Warning</span>
+                            <span class="pull-right-container">
+                          <small class="label pull-right bg-yellow">0</small>
+                        </span>
+                        </a>
+                    </li>
+                    <li class="pas-sidebar-element">
+                        <a href="{% url 'devices-info' %}" id="devices-info">
+                            <i class="fa fa-columns" aria-hidden="true"></i>
+                            <span>Devices</span>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+        <section class="content-header">
+            {% block content-header %}
+
+            {% endblock %}
+
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            {% if messages %}
+                <script>
+                    {% for message in messages %}
+                        {% if message.tags == 'success' %}
+                            toastr.success('Success!', '{{ message }}');
+                        {% else %}
+                            toastr.error('Error!', '{{ message }}');
+                        {% endif %}
+                    {% endfor %}
+                </script>
+            {% endif %}
+
+            {% block content %}
+            {% endblock %}
+        </section>
+    </div>
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 1.1.0
+        </div>
+        <strong>Designed by <a href="#">Ha Manh Dong</a>.</strong>
+    </footer>
+</div>
+
+</body>
+
+<!-- Script Section -->
+{% load static %}
+{#<script type="text/javascript" src="{% static '/pas/js/plugins/jquery-3.2.1.min.js' %}"></script>#}
+<script type="text/javascript" src="{% static '/pas/js/plugins/select2.min.js' %}"></script>
+<script type="text/javascript" src="{% static '/pas/js/plugins/d3.v3.min.js' %}"></script>
+<script type="text/javascript" src="{% static '/pas/js/plugins/Chart.min.js' %}"></script>
+<script type="text/javascript" src="{% static '/pas/js/plugins/Chart.PieceLabel.min.js' %}"></script>
+<!--datatables script -->
+<script type="text/javascript" src="{% static '/pas/js/plugins/datatables/jquery.dataTables.js' %}"></script>
+<script type="text/javascript" src="{% static '/pas/js/plugins/datatables/dataTables.bootstrap.js' %}"></script>
+{#<script type="text/javascript" src="{% static '/pas/js/plugins/toastr.min.js' %}"></script>#}
+
+<script src="{% static '/pas/bower_components/bootstrap.min.js' %}"></script>
+<script src="{% static '/pas/bower_components/jquery.slimscroll.js' %}"></script>
+<script src="{% static '/pas/bower_components/adminlte.min.js' %}"></script>
+
+<script src="{% static '/pas/js/plugins/moment-with-locales.js' %}"></script>
+
+<script type="text/javascript" src="{% static '/pas/js/main.js' %}"></script>
+
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            type: "get",
+            url: '/pas/warning',
+            data: {is_get_all: true},
+            success: function (data, text) {
+                if (data.status === 'success') {
+                    $('#warning_sidebar small').html(data.data);
+                } else {
+                    toastr.error('Cannot get number of warning!', 'Fail');
+                }
+            },
+            error: function (request, status, error) {
+                console.log(error);
+                toastr.error('Cannot get number of warning!', 'Fail');
+            }
+        });
+    });
+</script>
+
+{% block scripts %}
+{% endblock scripts %}
+
+<!-- //Script Section -->
+
+
+</html>

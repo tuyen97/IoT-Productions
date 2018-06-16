@@ -1,0 +1,9 @@
+Jinja2
+SQLAlchemy
+WTForms
+Pillow
+mysqlclient
+opencv-python
+opencv-contrib-python
+apscheduler
+django-bower

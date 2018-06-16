@@ -1,0 +1,16 @@
+rule "Led action"
+
+when 
+	Item auth_result received command
+then
+	if (auth_result.state == "OK") {
+		green_led.sendCommand(ON)
+		red_led.postUpdate(OFF)
+		yellow_led.postUpdate(OFF)
+	} 
+	if (auth_result.state =="FAIL") {
+		red_led.sendCommand(ON)
+		yellow_led.postUpdate(OFF)
+		green_led.postUpdate(OFF)
+	}
+end

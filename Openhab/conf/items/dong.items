@@ -1,0 +1,1 @@
+String dong "hello [%s]" {mqtt="<[mosquitto:dong:state:default]"}

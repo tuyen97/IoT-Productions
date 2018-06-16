@@ -1,0 +1,17 @@
+.bkcloud-datatables-info-container {
+    padding: 5px;
+    margin: 5px;
+}
+
+.small-box {
+    /*margin-left: 15px;*/
+}
+
+.small-box .icon {
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.info-box .info-box-icon i {
+    margin-top: 20px;
+}

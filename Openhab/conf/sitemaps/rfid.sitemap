@@ -1,0 +1,16 @@
+sitemap rfid label="Person Authentication System (PAS)" {
+	Frame label="RFID at entry" {
+		Text item=RFID_At_Entry label="Latest card-id scanned [%s]" icon="rfid"
+	}
+
+	Frame label="Server" {
+                Text item=auth_result label="Latest auth result [%s]"
+        }
+
+	Frame label="Leds" {
+		Text item=green_led label="Green led: RFID reader available [%s]" icon="light"
+		Text item=red_led label="Red led: RFID reader blocked [%s]" icon="light"
+		Text item=yellow_led label="Yellow led: RFID reader prepare to available [%s]" icon="light"
+	}
+
+}

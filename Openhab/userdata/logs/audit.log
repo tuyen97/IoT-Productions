@@ -1,0 +1,16 @@
+2018-03-24 09:45:16.883 [INFO ] [as.modules.audit.LogAuditLoginModule] - Authentication attempt - openhab
+2018-03-24 09:45:16.898 [INFO ] [as.modules.audit.LogAuditLoginModule] - Authentication failed - openhab
+2018-03-24 09:45:17.064 [INFO ] [as.modules.audit.LogAuditLoginModule] - Authentication attempt - openhab
+2018-03-24 09:45:17.107 [INFO ] [as.modules.audit.LogAuditLoginModule] - Authentication failed - openhab
+2018-03-24 09:45:47.559 [INFO ] [as.modules.audit.LogAuditLoginModule] - Authentication attempt - openhab
+2018-03-24 09:45:47.570 [INFO ] [as.modules.audit.LogAuditLoginModule] - Authentication failed - openhab
+2018-03-24 09:45:48.272 [INFO ] [as.modules.audit.LogAuditLoginModule] - Authentication attempt - openhab
+2018-03-24 09:45:48.275 [INFO ] [as.modules.audit.LogAuditLoginModule] - Authentication failed - openhab
+2018-03-24 09:45:48.293 [INFO ] [as.modules.audit.LogAuditLoginModule] - Authentication attempt - openhab
+2018-03-24 09:45:48.295 [INFO ] [as.modules.audit.LogAuditLoginModule] - Authentication failed - openhab
+2018-03-24 09:57:48.560 [INFO ] [as.modules.audit.LogAuditLoginModule] - Authentication attempt - openhab
+2018-03-24 09:57:48.562 [INFO ] [as.modules.audit.LogAuditLoginModule] - Authentication failed - openhab
+2018-03-24 09:57:48.595 [INFO ] [as.modules.audit.LogAuditLoginModule] - Authentication attempt - openhab
+2018-03-24 09:57:48.598 [INFO ] [as.modules.audit.LogAuditLoginModule] - Authentication failed - openhab
+2018-03-24 09:57:52.915 [INFO ] [as.modules.audit.LogAuditLoginModule] - Authentication attempt - openhab
+2018-03-24 09:57:52.920 [INFO ] [as.modules.audit.LogAuditLoginModule] - Authentication succeeded - openhab

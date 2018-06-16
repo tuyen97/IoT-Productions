@@ -1,0 +1,1 @@
+String RFID_At_Entry "RFID Reader at entry [%s]" <r>  {mqtt="<[mosquitto:pas/mqtt/rfid/user_scan:state:default]"}
