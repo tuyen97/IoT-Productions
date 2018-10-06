@@ -7,3 +7,4 @@ opencv-python
 opencv-contrib-python
 apscheduler
 django-bower
+requests
