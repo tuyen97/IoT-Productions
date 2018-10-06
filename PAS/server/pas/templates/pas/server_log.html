@@ -1,0 +1,141 @@
+
+{% extends "pas/base.html" %}
+
+{% block styles %}
+    <style type="text/css">
+        .img_timeline {
+            float: left;
+            max-width: 45px;
+            height: auto;;
+            border-radius: 50%;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-top: -2px;
+        }
+        h3.timeline-header span {
+            padding: 5px;
+            border-radius: 4px;
+            color: white;
+            margin-left: 5px;
+        }
+        .timeline-item {
+            background-color: beige !important;
+        }
+        .bg-yellow a {
+            color: white !important;
+            cursor: pointer;
+        }
+        .bg-yellow a:hover {
+            color: #23527c !important;
+        }
+        ul.users-list li {
+            width: 33% !important;
+        }
+        ul.users-list li img {
+            max-height: 84px;
+        }
+    </style>
+
+{% endblock styles %}
+
+{% block content-header %}
+    <h1 id="content-header-text">
+        Nhật kí phòng máy chủ
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    </ol>
+{% endblock content-header %}
+
+{% block content %}
+    {% load static %}
+    {% load tz %}
+
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Chưa quẹt thẻ khi ra ngoài</h4>
+            <div class="box bg-primary">
+                <div class="box-body">
+                    <table class="table table-bordered table-hover" width="100%">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Time</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for member,d in zipdata %}
+                            <tr>
+                                <td>
+                                    <a href="{% url 'member-profile' %}?id={{ member.id }}">{{ member.name }}
+                                    </a>
+                                </td>
+                                <td>
+                                    {{ d }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="position:sticky;">
+                <form method="post" action={% url 'server_log_stat' %}>
+                	Chọn ngày: <input type="date" name="ngay" required>
+                        <br><br><button type="submit" class="btn btn-info" id="chon_ngay">Chọn</button>
+                </form>
+            </div>
+            <div class="box bg-primary">
+                <div class="box-body">
+                    <ul class="timeline">
+                            <!-- timeline time label -->
+                            <li class="time-label">
+                                <span class="bg-red">Log for: <span>{{ ngay }}</span></span>
+                            </li>
+                            {% for log in logs %}
+
+                                    {% if log.unlock_server_room == 1 %}
+                                        <li>
+                                            <div class="timeline-item">
+                                                <span class="time"><i
+                                                        class="fa fa-clock-o"></i> {{ log.time_stamp }}</span>
+                                                <h3 class="timeline-header no-border"><a
+                                                        href="{% url 'member-profile' %}?id={{ log.member.id }}">{{ log.member.name }}</a>
+                                                    <span class="go_in"> Go in server <i
+                                                            class="fa fa-arrow-right"></i></span>
+                                                </h3>
+                                            </div>
+                                        </li>
+                                    {% elif log.unlock_server_room == 2 %}
+
+                                        <li>
+                                            <div class="timeline-item">
+                                                <span class="time"><i
+                                                        class="fa fa-clock-o"></i> {{ log.time_stamp }}</span>
+                                                <h3 class="timeline-header no-border"><a
+                                                        href="{% url 'member-profile' %}?id={{ log.member.id }}">{{ log.member.name }}</a>
+                                                    <span class="go_out"> go out <i class="fa fa-arrow-left"></i></span>
+                                                </h3>
+                                            </div>
+                                        </li>
+                                    {% endif %}
+                            {% endfor %}
+
+                            <li>
+                                <i class="fa fa-clock-o bg-gray"></i>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block scripts %}
+    {% load static %}
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="{% static '/pas/js/plugins/mqtt.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/pas/js/index.js' %}"></script>
+{% endblock scripts %}

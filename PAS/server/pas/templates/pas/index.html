@@ -11,35 +11,28 @@
             margin-left: 10px;
             margin-top: -2px;
         }
-
         h3.timeline-header span {
             padding: 5px;
             border-radius: 4px;
             color: white;
             margin-left: 5px;
         }
-
         .timeline-item {
             background-color: beige !important;
         }
-
         .bg-yellow a {
             color: white !important;
             cursor: pointer;
         }
-
         .bg-yellow a:hover {
             color: #23527c !important;
         }
-
         ul.users-list li {
             width: 33% !important;
         }
-
         ul.users-list li img {
             max-height: 84px;
         }
-
     </style>
 
 {% endblock styles %}
@@ -118,6 +111,7 @@
                                 <span class="bg-red">Today - <span id="today_timeline">dd/mm/yyyy</span></span>
                             </li>
                             {% for log in logs %}
+                                {% if log.result_auth != NULL %}
                                 {% if log.result_auth %}
                                     {% if log.is_go_in %}
                                         <li>
@@ -171,6 +165,7 @@
                                         </div>
                                     </li>
                                 {% endif %}
+                                {% endif%}
                             {% endfor %}
 
                             <li>

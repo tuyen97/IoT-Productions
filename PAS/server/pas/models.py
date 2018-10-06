@@ -89,9 +89,10 @@ class Member(AbstractBaseUser):
 class Logs(models.Model):
     time_stamp = models.DateTimeField('Time member in/out', primary_key=True)
     member = models.ForeignKey('Member', on_delete=models.CASCADE)
-    is_go_in = models.BooleanField(null=False)
-    result_auth = models.BooleanField(null=False)
+    is_go_in = models.BooleanField(null=True)
+    result_auth = models.BooleanField(null=True)
     image = models.ImageField(upload_to='logs/%Y/%m/%d')
+    unlock_server_room = models.IntegerField(null=True)
 
     # def __str__(self):
     #     return self.time_stamp

@@ -19,7 +19,8 @@ urlpatterns = [
     path('calculate_hour/', apis.calculate_hour, name='calculate_hour'),
     path('logout/', views.logout_view, name='logout'),
     path('login/', views.login_view, name='login'),
-
-    path('test/', apis.test),
+    path('server_log/',views.server_log, name='server_log'),
+    path('server_log_stat', views.server_log_stat, name='server_log_stat'),
+    path('test/', apis.test)
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
