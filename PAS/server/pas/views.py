@@ -77,11 +77,18 @@ def devices_info(request):
 def warning(request):
     if request.method == 'POST':
         id = request.POST['id']
+        uid = uuid.UUID(id).hex
         # request.POST['time_stamp'] = "2018-04-17 23:04:34"
         time_stamp = dateparse.parse_datetime(request.POST['time_stamp'])
-        tz = pytz.timezone(settings.TIME_ZONE).localize(time_stamp)
-        log = Logs.objects.get(member_id=id, time_stamp=tz)
+        #time_stamp=request.POST['time_stamp']
+  #      tz = pytz.timezone(settings.TIME_ZONE).localize(time_stamp)
+        print("ok")
+       # log1 = Logs.objects.filter(time_stamp=time_stamp)
+        log = Logs.objects.filter(member_id=uid, time_stamp=time_stamp).first()
+
         # log.image.delete(save=True)
+        #log = Logs.objects.all()
+        #l=log.first()
         log.result_auth = True
         log.save()
 

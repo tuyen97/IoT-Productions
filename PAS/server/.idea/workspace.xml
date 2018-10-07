@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e0a0904-1ddb-4eee-bc5c-01ab37b2875c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/server.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pas/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pas/mqtt.py" beforeDir="false" afterPath="$PROJECT_DIR$/pas/mqtt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/tmp/pas_face_10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/tmp/pas_face_10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/tmp/pas_face_11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/tmp/pas_face_11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/tmp/pas_face_12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/tmp/pas_face_12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/tmp/pas_face_13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/tmp/pas_face_13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pas/eigenfaces/3.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pas/static/pas/js/warning.js" beforeDir="false" afterPath="$PROJECT_DIR$/pas/static/pas/js/warning.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pas/templates/pas/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pas/templates/pas/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pas/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pas/templates/pas/server_log.html" beforeDir="false" afterPath="$PROJECT_DIR$/pas/templates/pas/server_log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pas/templates/pas/warning.html" beforeDir="false" afterPath="$PROJECT_DIR$/pas/templates/pas/warning.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pas/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,46 +24,53 @@
     <session id="-856670840">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="2" />
-          <entry key="py" value="5" />
+          <entry key="html" value="5" />
+          <entry key="js" value="4" />
+          <entry key="py" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="2" />
-          <entry key="Python" value="5" />
+          <entry key="HTML" value="5" />
+          <entry key="JavaScript" value="4" />
+          <entry key="Python" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="114" />
-          <entry key="py" value="463" />
+          <entry key="html" value="203" />
+          <entry key="js" value="153" />
+          <entry key="py" value="720" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="114" />
-          <entry key="Python" value="463" />
+          <entry key="HTML" value="203" />
+          <entry key="JavaScript" value="153" />
+          <entry key="Python" value="720" />
         </counts>
       </usages-collector>
     </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="server" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pas/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="408" column="12" selection-start-line="408" selection-start-column="12" selection-end-line="408" selection-end-column="12" />
+            <state relative-caret-position="102">
+              <caret line="91" selection-start-line="91" selection-end-line="91" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -68,24 +78,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pas/apis.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pas/mqtt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1020">
+            <state relative-caret-position="153">
+              <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pas/models.py">
+        <entry file="file://$PROJECT_DIR$/pas/face_recognize.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="104" selection-start-line="104" selection-end-line="104" />
+            <state>
+              <caret lean-forward="true" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pas/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-140">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="167">
+              <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -104,10 +115,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pas/templates/pas/server_log.html">
+        <entry file="file://$PROJECT_DIR$/pas/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="66" column="45" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
+            <state relative-caret-position="17">
+              <caret line="70" column="31" lean-forward="true" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pas/static/pas/js/warning.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -115,25 +138,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pas/templates/pas/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3196">
-              <caret line="188" selection-start-line="188" selection-end-line="188" />
+            <state relative-caret-position="265">
+              <caret line="103" column="69" selection-start-line="103" selection-start-column="69" selection-end-line="103" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pas/templates/pas/server_log.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="82" column="28" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pas/mqtt.py">
+        <entry file="file://$PROJECT_DIR$/pas/templates/pas/warning.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="70" column="73" selection-start-line="70" selection-start-column="73" selection-end-line="70" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pas/static/pas/js/devices.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>warning</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -142,11 +181,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pas/urls.py" />
-        <option value="$PROJECT_DIR$/pas/templates/pas/index.html" />
         <option value="$PROJECT_DIR$/pas/models.py" />
         <option value="$PROJECT_DIR$/pas/mqtt.py" />
-        <option value="$PROJECT_DIR$/pas/templates/pas/server_log.html" />
+        <option value="$PROJECT_DIR$/pas/templates/pas/warning.html" />
         <option value="$PROJECT_DIR$/pas/views.py" />
+        <option value="$PROJECT_DIR$/pas/static/pas/js/warning.js" />
+        <option value="$PROJECT_DIR$/pas/templates/pas/index.html" />
+        <option value="$PROJECT_DIR$/pas/templates/pas/server_log.html" />
       </list>
     </option>
   </component>
@@ -163,7 +204,7 @@
       <path value="$PROJECT_DIR$/pas/static/pas/bower_components/recordrtc/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="27" />
     <option name="width" value="1299" />
@@ -191,7 +232,46 @@
               <item name="server" type="b2602c69:ProjectViewProjectNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="pas" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="pas" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="pas" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="pas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="pas" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="pas" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="pas" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="pas" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="pas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="server" type="b2602c69:ProjectViewProjectNode" />
@@ -260,23 +340,32 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="27" width="1299" height="741" extended-state="7" />
+    <frame x="67" y="27" width="1299" height="741" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49878934" visible="true" weight="0.25778133" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.26177174" />
       <window_info id="Structure" order="1" sideWeight="0.50121063" side_tool="true" weight="0.25379092" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" sideWeight="0.502439" side_tool="true" weight="0.25778133" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3284553" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24878049" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39349595" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3284553" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3284553" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3284553" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -285,6 +374,29 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.26177174" />
+      <window_info id="Structure" order="1" sideWeight="0.50121063" side_tool="true" weight="0.25379092" />
+      <window_info id="Favorites" order="2" sideWeight="0.502439" side_tool="true" weight="0.25778133" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24878049" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39349595" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3284553" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3284553" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3284553" />
+      <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -292,67 +404,125 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pas/templates/pas/index.html">
+    <entry file="file://$PROJECT_DIR$/pas/apis.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pas/const.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3196">
-          <caret line="188" selection-start-line="188" selection-end-line="188" />
+        <state relative-caret-position="52">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pas/urls.py">
+    <entry file="file://$PROJECT_DIR$/pas/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pas/static/pas/js/main.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pas/static/pas/js/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pas/static/pas/js/devices.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/lib/python3.6/socket.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-140">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="17">
+          <caret line="677" column="17" lean-forward="true" selection-start-line="677" selection-start-column="17" selection-end-line="677" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pas/face_recognize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
           <folding>
-            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pas/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        <state relative-caret-position="17">
+          <caret line="70" column="31" lean-forward="true" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pas/templates/pas/server_log.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="66" column="45" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pas/mqtt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        <state relative-caret-position="153">
+          <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pas/templates/pas/warning.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="70" column="73" selection-start-line="70" selection-start-column="73" selection-end-line="70" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pas/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="408" column="12" selection-start-line="408" selection-start-column="12" selection-end-line="408" selection-end-column="12" />
+        <state relative-caret-position="102">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pas/apis.py">
+    <entry file="file://$PROJECT_DIR$/pas/static/pas/js/warning.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1020">
+        <state relative-caret-position="180">
+          <caret line="42" column="2" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pas/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pas/templates/pas/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="103" column="69" selection-start-line="103" selection-start-column="69" selection-end-line="103" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pas/templates/pas/server_log.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="82" column="28" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
         </state>
       </provider>
     </entry>
