@@ -2,7 +2,9 @@ from django.urls import path, re_path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+import uuid
 from . import views, apis
+from . import models
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -24,3 +26,16 @@ urlpatterns = [
     path('test/', apis.test)
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+user = models.Member(id = uuid.uuid4(),
+                     name="tuyen",
+                     email="tuyen@hpcc.com",
+                     card_id="1A 2B 3C",
+                     course="iot",
+                     research_about="iot",
+                     coefficient="1",
+                     position= "TE")
+try:
+    u = models.Member.objects.get(email="tuyen@hpcc.com", password="password")
+except models.Member.DoesNotExist:
+    user.save()
