@@ -183,6 +183,7 @@ def members_info(request):
                     coefficient=form.data['coefficient'],
                     position=form.data['position']
                 )
+                print("ok")
                 u.save()
 
                 # TODO: un-comment for send request to Blockchain server
