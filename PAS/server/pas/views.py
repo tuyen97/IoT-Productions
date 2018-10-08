@@ -22,7 +22,7 @@ from . import get_faces_to_train, face_train, face_recognize, const, \
 
 from server import settings
 
-
+mqtt.client.loop_start()
 @login_required()
 def index(request):
     today_min = datetime.datetime.combine(datetime.date.today(), datetime.time.min)
@@ -77,11 +77,18 @@ def devices_info(request):
 def warning(request):
     if request.method == 'POST':
         id = request.POST['id']
+        uid = uuid.UUID(id).hex
         # request.POST['time_stamp'] = "2018-04-17 23:04:34"
         time_stamp = dateparse.parse_datetime(request.POST['time_stamp'])
-        tz = pytz.timezone(settings.TIME_ZONE).localize(time_stamp)
-        log = Logs.objects.get(member_id=id, time_stamp=tz)
+        #time_stamp=request.POST['time_stamp']
+  #      tz = pytz.timezone(settings.TIME_ZONE).localize(time_stamp)
+        print("ok")
+       # log1 = Logs.objects.filter(time_stamp=time_stamp)
+        log = Logs.objects.filter(member_id=uid, time_stamp=time_stamp).first()
+
         # log.image.delete(save=True)
+        #log = Logs.objects.all()
+        #l=log.first()
         log.result_auth = True
         log.save()
 
@@ -398,3 +405,29 @@ def upload_video(request):
             }
 
         return JsonResponse(http_response)
+def server_log(request):
+    zipped = zip(mqtt.member_in_server, mqtt.day)
+    today_min = datetime.datetime.combine(datetime.date.today(), datetime.time.min)
+    today_max = datetime.datetime.combine(datetime.date.today(), datetime.time.max)
+    logs_for_today = Logs.objects.filter(time_stamp__range=(today_min, today_max))
+    context = {
+            'logs':logs_for_today,
+            'ngay':datetime.date.today().strftime("%B %d, %Y"),
+            'zipdata': zipped
+            }
+    return render(request,'pas/server_log.html',context)
+
+def server_log_stat(request):
+    zipped = zip(mqtt.member_in_server,mqtt.day)
+    date = request.POST['ngay']
+    d = datetime.datetime.strptime(date, '%Y-%m-%d')
+    today_min = datetime.datetime.combine(d, datetime.time.min)
+    today_max = datetime.datetime.combine(d, datetime.time.max)
+    logs_for_today = Logs.objects.filter(time_stamp__range=(today_min, today_max))
+    context={
+        'logs':logs_for_today,
+        'ngay':d.strftime("%B %d, %Y"),
+        'zipdata': zipped
+    }
+    return render(request,'pas/server_log.html',context)
+

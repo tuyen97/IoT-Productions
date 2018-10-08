@@ -66,12 +66,12 @@
                                     <td>{{ log.time_stamp|date:"Y-m-d H:i:s" }}</td>
                                     <td class="actions_column" style="text-align: center;">
                                         <button type="button" class="btn btn-default btn_verify_member"
-                                                data-time_stamp="{{ log.time_stamp|date:"Y-m-d H:i:s" }}"
+                                                data-time_stamp="{{ log.time_stamp|date:"c"  }}"
                                                 data-id="{{ log.member.id }}">
                                             <i class="fa fa-question-circle"></i> Verify
                                         </button>
                                         <button type="button" class="btn btn-warning btn_discard_member"
-                                                data-time_stamp="{{ log.time_stamp|date:"Y-m-d H:i:s" }}"
+                                                data-time_stamp="{{ log.time_stamp|date:"c" }}"
                                                 data-id="{{ log.member.id }}">
                                             <i class="fa fa-warning"></i> Discard
                                         </button>
