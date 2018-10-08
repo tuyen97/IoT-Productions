@@ -109,4 +109,6 @@ ENV/
 
 # mypy
 .mypy_cache/
-/config.pyPAS/server/venv
+/config.py
+
+PAS/server/venv
