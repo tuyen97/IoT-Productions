@@ -28,12 +28,20 @@ def index(request):
     today_min = datetime.datetime.combine(datetime.date.today(), datetime.time.min)
     today_max = datetime.datetime.combine(datetime.date.today(), datetime.time.max)
     logs_for_today = Logs.objects.filter(time_stamp__range=(today_min, today_max))
-
+    member_have_log_today = []
+    for log in logs_for_today:
+        if(log.member not in member_have_log_today):
+            member_have_log_today.append(log.member)
     members_in_lab = Member.objects.filter(is_in_lab=True)
+    member_in_lab_now=[]
+    for member in members_in_lab:
+        print(member.name)
+        if(member in member_have_log_today):
+            member_in_lab_now.append(member)
 
     context = {
         'logs': logs_for_today,
-        'members_in_lab': members_in_lab
+        'members_in_lab': member_in_lab_now
     }
     return render(request, 'pas/index.html', context)
 
@@ -183,7 +191,6 @@ def members_info(request):
                     coefficient=form.data['coefficient'],
                     position=form.data['position']
                 )
-                print("ok")
                 u.save()
 
                 # TODO: un-comment for send request to Blockchain server
@@ -258,68 +265,72 @@ def change_card_id(request):
 def server_authentication(request):
     if request.method == 'POST':
         card_id = request.POST['card_id']
-        member = Member.objects.get(card_id=card_id)
-        last_image_name = ''
-        # save images to /tmp folder
-        for face_key in request.FILES:
-            last_image_name = face_key
-            data = request.FILES[face_key]
-            face = ImageFile(data)
-            face_path = 'tmp/' + str(data)
-            if default_storage.exists(face_path):
-                default_storage.delete(face_path)
-            default_storage.save(face_path, face)
-
-        # get result of predict list images
-        list_predicts = face_recognize.recognition(member.recognize_label)
-        # list_predicts = []
-        if len(list_predicts):
-            last_image_name = list_predicts[0][0]
-
-        # check threshold
-        result_auth = False
-        f_name = None
-        for file_name, conf in list_predicts:
-            print(conf)
-            if conf < member.threshold:
-                result_auth = True
-                f_name = file_name
-                break
-        # publish result auth to mqtt topic /pas/mqtt/icse/auth
-        result_auth_payload = 'OK' if result_auth else 'FAIL'
-        mqtt.publish(const.MQTT_AUTH_TOPIC, result_auth_payload)
-
-        # get latest logs to check user in or out
         try:
-            # TODO: check last log for new day, not last day
-            last_log = Logs.objects.filter(member_id=member.id).latest('time_stamp')
-            is_go_in = False if last_log.is_go_in else True
-        except Logs.DoesNotExist:
-            is_go_in = True
+            member = Member.objects.get(card_id=card_id)
+            last_image_name = ''
+            # save images to /tmp folder
+            for face_key in request.FILES:
+                last_image_name = face_key
+                data = request.FILES[face_key]
+                face = ImageFile(data)
+                face_path = 'tmp/' + str(data)
+                if default_storage.exists(face_path):
+                    default_storage.delete(face_path)
+                default_storage.save(face_path, face)
 
-        member.is_in_lab = True if is_go_in else False
-        member.save()
+            # get result of predict list images
+            list_predicts = face_recognize.recognition(member.recognize_label)
+            # list_predicts = []
+            if len(list_predicts):
+                last_image_name = list_predicts[0][0]
 
-        # publish latest user scan to web browser
-        latest_user_scan_payload = {
-            'member_name': member.name,
-            'state': 'Goes In' if is_go_in else 'Goes Out'
-        }
-        mqtt.publish(const.MQTT_LATEST_USER_SCAN, json.dumps(latest_user_scan_payload))
+            # check threshold
+            result_auth = False
+            f_name = None
+            for file_name, conf in list_predicts:
+                print(conf)
+                if conf < member.threshold:
+                    result_auth = True
+                    f_name = file_name
+                    break
+            # publish result auth to mqtt topic /pas/mqtt/icse/auth
+            result_auth_payload = 'OK' if result_auth else 'FAIL'
+            mqtt.publish(const.MQTT_AUTH_TOPIC, result_auth_payload)
+            print("ok")
+            # get latest logs to check user in or out
+            try:
+                # TODO: check last log for new day, not last day
+                last_log = Logs.objects.filter(member_id=member.id).latest('time_stamp')
+                is_go_in = False if last_log.is_go_in else True
+            except Logs.DoesNotExist:
+                is_go_in = True
 
-        # save logs
-        log = Logs(
-            time_stamp=timezone.now(),
-            member=member,
-            result_auth=result_auth,
-            is_go_in=is_go_in,
-        )
-        f_name = f_name if result_auth else last_image_name
-        file_path = os.path.join(const.TMP_FOLDER, f_name)
-        file_data = File(open(file_path, 'rb'))
-        log.image.save(f_name, file_data, save=True)
-        log.save()
+            member.is_in_lab = True if is_go_in else False
+            member.save()
 
+            # publish latest user scan to web browser
+            latest_user_scan_payload = {
+                'member_name': member.name,
+                'state': 'Goes In' if is_go_in else 'Goes Out'
+            }
+            mqtt.publish(const.MQTT_LATEST_USER_SCAN, json.dumps(latest_user_scan_payload))
+
+            # save logs
+            log = Logs(
+                time_stamp=timezone.now(),
+                member=member,
+                result_auth=result_auth,
+                is_go_in=is_go_in,
+            )
+            f_name = f_name if result_auth else last_image_name
+            file_path = os.path.join(const.TMP_FOLDER, f_name)
+            file_data = File(open(file_path, 'rb'))
+            log.image.save(f_name, file_data, save=True)
+            log.save()
+        except Member.DoesNotExist:
+            print("member does not exist")
+            mqtt.publish(const.MQTT_AUTH_TOPIC, 'FAIL')
+            mqtt.publish(const.MQTT_MEMBER_DOES_NOT_EXIST, '1')
         return HttpResponse("POST request success")
     return HttpResponse("Not valid request type!")
 
@@ -431,4 +442,5 @@ def server_log_stat(request):
         'zipdata': zipped
     }
     return render(request,'pas/server_log.html',context)
+
 

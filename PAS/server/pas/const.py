@@ -21,6 +21,7 @@ VIDEO_PATH = os.path.join(settings.BASE_DIR, 'images/video/')
 
 TRAIN_FACES_FOLDER_NAME = 'train_faces/'
 TEST_FACES_FOLDER_NAME = 'test_faces/'
+MQTT_MEMBER_DOES_NOT_EXIST="pas/mqtt/member/does_not_exist"
 
 NUMBER_COMPONENT = 200
 

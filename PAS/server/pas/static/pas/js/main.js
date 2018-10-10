@@ -10,6 +10,7 @@ let MQTT_TOPIC_USER_REGISTER = "pas/mqtt/rfid/user_register";
 let MQTT_TOPIC_LATEST_USER_SCAN = "pas/mqtt/server/latest_scan";
 let MQTT_TOPIC_USER_CHANGE = "pas/mqtt/rfid/user_change";
 let MQTT_TOPIC_RFID_ACTION = "pas/mqtt/rfid/action";
+let MQTT_MEMBER_DOES_NOT_EXIST="pas/mqtt/member/does_not_exist";
 
 $('.pas-sidebar-element').each(function (index) {
     $(this).on('click', function () {
